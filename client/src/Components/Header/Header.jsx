@@ -4,18 +4,19 @@ import { SlLocationPin } from "react-icons/sl";
 import { BiCart } from "react-icons/bi";
 import classes from "./Header.module.css";
 import LowerHeader from "./LowerHeader";
+import { Link } from "react-router-dom";
 function Header() {
   return (
     <>
       <section>
         <div className={classes.header__container}>
           <div className={classes.logo__container}>
-            <a href="/">
+            <Link to="/">
               <img
                 src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
                 alt="logo"
               />
-            </a>
+            </Link>
             <div className={classes.delivery}>
               <span>
                 <SlLocationPin />
@@ -44,19 +45,19 @@ function Header() {
               </select>
             </div>
 
-            <a href="/">
+            <Link to="/auth">
               <p>Sign In</p>
               <span>Account & Lists</span>
-            </a>
-            <a href="/">
+            </Link>
+            <Link to="/orders">
               <p>returns</p>
               <span> & Orders</span>
-            </a>
-            <a href="/cart" className={classes.cart}>
+            </Link>
+            <Link to="/cart" className={classes.cart}>
               <BiCart size={35} />
               <span>0</span>
               <sub>Cart</sub>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
